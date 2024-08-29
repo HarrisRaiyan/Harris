@@ -23,15 +23,13 @@ Rm for delete the file
 Cp for moving the contant from one file to
 another
 Mv for rename the file name
-Cat file1 >> file2 it wouldn't remove the
-data it will the add the files.
-Head for first 10 lines to show the file
-Head -15 to show the file
+Cat file1 >> file2 it wouldn't remove the data it will the add the files.
+Head for first 10 lines to show the file.
+Head -15 to show the file.
 Tail use to bottom show the file logs
 Sed -n '5,15p' (nameofthefile) to show the middle files
-wc to show the number of words and
-sentance
-Types of files in II to see files extensions.
+wc to show the number of words and sentance.
+Types of files in II or ls to see files extensions.
 - regular file
 B blocked file
 C character file
@@ -44,33 +42,24 @@ Grep gobal regular expression print
 grep is case sensitive, to avoid-i
 -c is count
 To avoid that line use -v
-I pipe symbol is used to read the first command to execute the second
-command
+(|) pipe symbol is used to read the first command to execute the second command.
 Sed command is used for replace the word (sed 's/word1/word2/' file1 >> file2)
-To create user command is adduser
-(name of the user)
-To see list of the user cammond is (cat /etc/passwd)
-To set the password for user passwd (
-user name)
-To add the user as sudo user command is
-(visudo) in that copy root user and edit the name of the user
-Git init command is used for to create git repo in local (.git dictionary name) To add the file in git use git add command
-To commit the file in git use git commit -m "version-1" filename
-To check the status git status
-To set the name of config command is git
-config user.name(" name of the user")
-For mail user.mail
-To show log in one line cammond is git log
---oneline
-To change the branch git checkout (name
-of the branch)
-To create a branch git branch (name)
-To link remote git remote add origin (link of the repository)
-To push the repository to GitHub the
-command is git push origin (branch name)
+To create user command is - adduser (name of the user)
+To see list of the user cammond is - (cat /etc/passwd)
+To set the password for user - passwd (user name)
+To add the user as sudo user command is (visudo) in that copy root user and edit the name of the user
+To create git repo in local (.git dictionary name) - Git init 
+To add the file in git use - git add (filename) command
+To commit the file in git use - git commit -m "version-1" filename
+To check the status - (git status)
+To set the name of config command is - git config user.name(" name of the user") & For mail user.mail
+To show log in one line cammond is - (git log --oneline)
+To change the branch - git checkout (name of the branch)
+To create a branch - git branch (name)
+To link remote - git remote add origin (link of the repository)
+To push the repository to GitHub the command is - git push origin (branch name)
 To ignore the file,create vim .gitignore and add the file names in that
-To rename the branch name command is
-git branch -m (old branch name) to (new branch name)
+To rename the branch name command is - git branch -m (old branch name) to (new branch name)
 To merge the branch command is git
 merge (branch name) it shows the branch.
 In rebase the branch will not show
