@@ -48,22 +48,3 @@ To create user command is - adduser (name of the user)
 To see list of the user cammond is - (cat /etc/passwd)
 To set the password for user - passwd (user name)
 To add the user as sudo user command is (visudo) in that copy root user and edit the name of the user
-To create git repo in local (.git dictionary name) - Git init 
-To add the file in git use - git add (filename) command
-To commit the file in git use - git commit -m "version-1" filename
-To check the status - (git status)
-To set the name of config command is - git config user.name(" name of the user") & For mail user.mail
-To show log in one line cammond is - (git log --oneline)
-To change the branch - git checkout (name of the branch)
-To create a branch - git branch (name)
-To link remote - git remote add origin (link of the repository)
-To push the repository to GitHub the command is - git push origin (branch name)
-To ignore the file,create vim .gitignore and add the file names in that
-To rename the branch name command is - git branch -m (old branch name) to (new branch name)
-To merge the branch command is git
-merge (branch name) it shows the branch.
-In rebase the branch will not show
-To delete the branch command is git branch -D (branch name)
-Git reflog to restore the deleted branch
-To hide the files first add in git and use command git stash to restore the same (git stash apply)
-To remove the files from tracked to untracked cammond is git rm --cached ( file name)
