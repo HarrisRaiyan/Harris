@@ -1,0 +1,12 @@
+In vim editor from here everything vim
+going last line shift g
+First line in vim gg
+:sed number to show the line in vim editor
+To go particular line :(linenumber)
+To copy the line yy
+To paste p
+To delete dd
+Undo u
+Redo Ctrl r
+:%s/word1/word2/g to replace the word if we have repeated file in inside the file
+:%s/word1/word2/ to replace the word in inside the file
