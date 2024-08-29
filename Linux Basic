@@ -1,10 +1,6 @@
-Linux commands
-28 August 10:07 PM 2454 characters
-0
 Pwd for print with Directory
 Cd change Directory
 Delete folder rm-r (dictionary name)
-Starsudipa
 Cat /proc/cpuinfo show upc info
 Lscpu show upc info
 Cat /proc/meminfo show memory info
@@ -15,16 +11,16 @@ Df to show storage info
 Top to show the running program
 Chmod 777 for all parmissions
 1 for exicute the file
-• 2 for read the file
+2 for read the file
 4 for write the file
 First user of the file
 Second group of the file
 Third others of the file
 Changing the user Su (username)
-• Creating new user can be done only root
+Creating new user can be done only root
 user command is adduser
 Rm for delete the file
-⚫ Cp for moving the contant from one file to
+Cp for moving the contant from one file to
 another
 Mv for rename the file name
 Cat file1 >> file2 it wouldn't remove the
@@ -35,23 +31,9 @@ Tail use to bottom show the file logs
 Sed -n '5,15p' (nameofthefile) to show the middle files
 wc to show the number of words and
 sentance
-In vim editor from here everything vim
-going last line shift g
-First line in vim gg
-:sed number to show the line in vim editor
-To go particular line :(linenumber)
-To copy the line yy
-To paste p
-To delete dd
-Undo u
-Redo Ctrl r
-:%s/word1/word2/g to replace the word if we have repeated file in inside the file
-:%s/word1/word2/ to replace the word in inside the file
-End of vim
-Types of files in II
-⚫ - regular file
-⚫B blocked file
-O
+Types of files in II to see files extensions.
+- regular file
+B blocked file
 C character file
 D directory
 L link file
