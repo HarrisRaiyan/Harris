@@ -1,0 +1,9 @@
+To active the office and windows key
+
+ irm https://massgrave.dev/get | iex
+
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print
+
+Rename: DWORD value to ‘RpcAuthnLevelPrivacyEnabled’
