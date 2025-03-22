@@ -49,6 +49,11 @@ To see list of the user cammond is - (cat /etc/passwd)
 To set the password for user - passwd (user name)
 To add the user as sudo user command is (visudo) in that copy root user and edit the name of the user
 curl stands for "Client for URL" this can command use to download the files from https and http and ftp.
+curl -O "URl" for downloading from website
+curl sending request to http (post,get)
+curl -F "from system file" "URL" this is use to upload the file
+Apache /etc/httpd/conf/httpd.conf location of conf file to edit the details 
+Nginx /etc/nginx/nginx.conf location of conf file to edit the details 
 
 
 
