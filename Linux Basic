@@ -48,3 +48,7 @@ To create user command is - adduser (name of the user)
 To see list of the user cammond is - (cat /etc/passwd)
 To set the password for user - passwd (user name)
 To add the user as sudo user command is (visudo) in that copy root user and edit the name of the user
+curl stands for "Client for URL" this can command use to download the files from https and http and ftp.
+
+
+
