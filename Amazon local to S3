@@ -20,3 +20,22 @@ aws s3 sync "$source" "$bucket" --delete | Out-File -FilePath $log -Append
 Add-Content $log "Backup completed at $(Get-Date)`n"
 for copying the file from local to S3
 aws s3 cp test.txt s3://your-bucket-name/test.txt
+
+In linux
+sudo apt install awscli -y
+aws configure
+#!/bin/bash
+
+# Source directory
+SOURCE_DIR="/home/username/mydata"
+
+# S3 bucket path
+S3_BUCKET="s3://my-bucket-name/backup"
+
+# Sync local folder to S3
+aws s3 sync "$SOURCE_DIR" "$S3_BUCKET" --delete
+
+# Optional: log output
+echo "Backup completed at $(date)" >> /var/log/s3_backup.log
+
+chmod +x backup_to_s3.sh
