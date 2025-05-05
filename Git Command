@@ -17,3 +17,4 @@ To delete the branch command is git branch -D (branch name)
 Git reflog to restore the deleted branch
 To hide the files first add in git and use command git stash to restore the same (git stash apply)
 To remove the files from tracked to untracked cammond is git rm --cached ( file name)
+hari a
