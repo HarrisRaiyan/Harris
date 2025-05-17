@@ -54,6 +54,8 @@ curl sending request to http (post,get)
 curl -F "from system file" "URL" this is use to upload the file
 Apache /etc/httpd/conf/httpd.conf location of conf file to edit the details 
 Nginx /etc/nginx/nginx.conf location of conf file to edit the details 
+changing the owner of the file is chown (username) filename
+for both owner and group is same have to use the command is username:username filename
 
 
 
