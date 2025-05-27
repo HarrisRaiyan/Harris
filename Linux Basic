@@ -56,6 +56,6 @@ Apache /etc/httpd/conf/httpd.conf location of conf file to edit the details
 Nginx /etc/nginx/nginx.conf location of conf file to edit the details 
 changing the owner of the file is chown (username) filename
 for both owner and group is same have to use the command is username:username filename
-
+ps -ef used for running processing software
 
 
