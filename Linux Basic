@@ -57,5 +57,6 @@ Nginx /etc/nginx/nginx.conf location of conf file to edit the details
 changing the owner of the file is chown (username) filename
 for both owner and group is same have to use the command is username:username filename
 ps -ef used for running processing software
-
+for giving a variable in linux export nameofthevariable=(what need to be give)
+for check variables (printenv)
 
