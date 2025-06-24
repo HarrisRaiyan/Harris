@@ -26,3 +26,7 @@ to check the namespace of the pod with full details vommand is ( kubectl get pod
 for same describe (kubectl describe pod -n (namespace) (podname))
 to check running daemonset command is(kubectl  get deamonset -n (namespace))
 
+to delete the deployment command is (kubectl delete -n (namespace) --all or can mention the name of the deployment
+to delete the replicaset this is the same for both replicaset and daemonset
+
+
