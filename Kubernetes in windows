@@ -5,3 +5,10 @@ to check the running pods in client machine (kubectl get pod)
 first create a pod.yaml file with required pods 
 then for creating the pod command is (kubectl apply -f pod.yaml)
 kubectl described pod (podname) to show full details of pod
+kubectl get namespace this command while shop the namespace in cluster.
+when we not mention the namespace in pod.yaml file this will create in defult namespace there are 4 namespaces
+defult
+kube-node-lease
+kube-public
+kube-system
+for checking which are the pods are running in which namespace the command is (kubectl get pod -n (name of the namespace))
