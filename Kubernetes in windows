@@ -21,4 +21,5 @@ in kube-system the every master pods are running like api scheduler controller m
 when we create a cluster in aws using kops for installation kops we can get in offical page cammond and there will be two nodes(nodes means one system or server) first  node is master node that have the control of every work node and master node is having the pods under which api ,scheduler ,controller manager and etcd.
 every pod is created in work node
 kubectl delete pod (name of the pod)
+to check the details of replicaset command is (kubectl get replicaset)
 
