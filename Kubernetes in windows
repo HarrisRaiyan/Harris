@@ -28,5 +28,5 @@ to check running daemonset command is(kubectl  get deamonset -n (namespace))
 
 to delete the deployment command is (kubectl delete -n (namespace) --all or can mention the name of the deployment
 to delete the replicaset this is the same for both replicaset and daemonset
-
+to delete the namespace command is ( kubectl delete ns (name))
 
