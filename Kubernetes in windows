@@ -12,3 +12,6 @@ kube-node-lease
 kube-public
 kube-system
 for checking which are the pods are running in which namespace the command is (kubectl get pod -n (name of the namespace))
+
+for creating a namespace command is (kubectl create ns (name))
+
