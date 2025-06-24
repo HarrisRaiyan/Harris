@@ -1,7 +1,8 @@
 for minikube installations directly can use the steps given in official website.
 for checking the node the command is kubectl get node
 for detail information of node command is kubectl get node -o wide
-to check the running pods in client machine (kubectl get pod)
+
+to check the running pods in client machine (kubectl get pod) it shows only defult namespace pods only
 first create a pod.yaml file with required pods 
 then for creating the pod command is (kubectl apply -f pod.yaml)
 kubectl described pod (podname) to show full details of pod
