@@ -5,7 +5,7 @@ for detail information of node command is kubectl get node -o wide
 to check the running pods in client machine (kubectl get pod) it shows only defult namespace pods only
 first create a pod.yaml file with required pods 
 then for creating the pod command is (kubectl apply -f pod.yaml)
-kubectl described pod (podname) to show full details of pod
+kubectl describe pod (podname) to show full details of pod
 kubectl get namespace this command while shop the namespace in cluster.
 when we not mention the namespace in pod.yaml file this will create in defult namespace there are 4 namespaces
 defult
@@ -22,4 +22,6 @@ when we create a cluster in aws using kops for installation kops we can get in o
 every pod is created in work node
 kubectl delete pod (name of the pod)
 to check the details of replicaset command is (kubectl get replicaset)
+to check the namespace of the pod with full details vommand is ( kubectl get pod -n (namespace) -o wide 
+for same describe (kubectl describe pod -n (namespace) (podname))
 
