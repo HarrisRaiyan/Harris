@@ -14,6 +14,17 @@ kube-public
 kube-system
 for checking which are the pods are running in which namespace the command is (kubectl get pod -n (name of the namespace))
 
+Network CNI (cluster Network Interface)
+from the public accessing the pod using the public the port number
+for nodeport 30000-32767
+in .yaml have to nodeport is 30000
+container port : 80
+target port (this means pod port) : target pod and the container have to be same
+port ( this means cluster port ) : 8080
+ the flow of the reaching to application is user have to hit the nodeport 
+then it will go cluster and pod and the container then the user can access the application
+
+
 for creating a namespace command is (kubectl create ns (name))
 
 in kube-system the every master pods are running like api scheduler controller manager and etcd this everything is created as dedult under namespace kube-system.
@@ -31,4 +42,6 @@ to delete the replicaset this is the same for both replicaset and daemonset
 to delete the namespace command is ( kubectl delete ns (name))
 for checking the service of the pod (kubectl get svc)
 for login into the pod command (kubectl exec -it podname /bin/bash)
+without login to pod directly run the command from the node the command is (kubectl exec -it podname printenv)
+for the 
 
