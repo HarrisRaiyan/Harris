@@ -43,5 +43,23 @@ to delete the namespace command is ( kubectl delete ns (name))
 for checking the service of the pod (kubectl get svc)
 for login into the pod command (kubectl exec -it podname /bin/bash)
 without login to pod directly run the command from the node the command is (kubectl exec -it podname printenv)
-for the 
+
+
+config 
+apiVersion: apps/v1
+kind: ConfigMap
+metadata:
+  name: MySQL
+data:
+  username:"dev-admin"
+  pass: "devpassword123"
+  port : 3306
+
+
+the configMap is used to store the data in data what are the data it's saved under the data it can be used at depoloyment
+eample for conecting the db everytime entering the details for every server is take time so the ConfigMap is can use the for fast and multiple time
+
+for creating the configmap is same as pod like (kubectl -f apply config.yaml)
+for seeing configmap is running or not the command is (kubectl  get ConfigMap)
+
 
