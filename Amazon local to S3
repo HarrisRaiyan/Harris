@@ -39,3 +39,7 @@ aws s3 sync "$SOURCE_DIR" "$S3_BUCKET" --delete
 echo "Backup completed at $(date)" >> /var/log/s3_backup.log
 
 chmod +x backup_to_s3.sh
+
+
+Access key : AKIATQZCSYVGMSJ3C344
+Secret access key : 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
