@@ -48,6 +48,6 @@ kind: Secret
 metadata:
   name:dot-Secret file
 data:
-  .secret-file: (encrepted words)
+  .dockerconfigjson: (encrepted words)
 
   
