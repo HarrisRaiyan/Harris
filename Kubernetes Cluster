@@ -41,7 +41,7 @@ spec:
  container:
   name: Myimg
   image: dockerhub image name
-  imagepull: dot-secret file (the image secert name of that)
+  imagePullsecrets: dot-secret file (the image secert name of that)
 
 apiVersion: v1
 kind: Secret
