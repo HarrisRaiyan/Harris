@@ -59,4 +59,4 @@ for both owner and group is same have to use the command is username:username fi
 ps -ef used for running processing software
 for giving a variable in linux export nameofthevariable=(what need to be give)
 for check variables (printenv)
-
+to see the encrepted value command is (echo "the value" | base64 --decode
