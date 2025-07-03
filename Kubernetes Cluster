@@ -30,3 +30,24 @@ spec:
       containers:
       - name: php-redis
         image: us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v5
+
+for secret file calling the secret file yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myimage
+spec:
+ container:
+  name: Myimg
+  image: dockerhub image name
+  imagepull: dot-secret file (the image secert name of that)
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name:dot-Secret file
+data:
+  .secret-file: (encrepted words)
+
+  
