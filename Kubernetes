@@ -1,6 +1,24 @@
+cluster is called 1 master node and the worker node of the master node.
+node is called machine 
+pods is like working container which we can run the multiple container in single pod 
+
+there is 3 methods of the kubrnetes to run the pods
+
+1) Kops- this method is used widely , needs of the kops is cleint machine like (our own laptop can configure and using the EC2 we can configure)
+   1.it has 2 nodes compulsory master node and worker node for worker node we can use the mutliple for one cluster only one master node to control the worker node.
+   2.the minimum CPU for master node is 2vCPU and ram 2GB (t3 small) 
+   3. the minimum CPU for worker node is 2vCPU and ram 2GB (t3 Small) depending on the application we have to choose the configuration 
+   4. to install the kops awscli for taking access for the aws console command is apt install awscli
+   4. then kubectl this command is used for control the nodes to install the command is apt install kubectl
+   5. then kops for this 
+     curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+      chmod +x kops
+       sudo mv kops /usr/local/bin/kops
+
 for minikube installations directly can use the steps given in official website.
 for checking the node the command is kubectl get node
 for detail information of node command is kubectl get node -o wide
+
 
 to check the running pods in client machine (kubectl get pod) it shows only defult namespace pods only
 first create a pod.yaml file with required pods 
@@ -12,7 +30,7 @@ defult
 kube-node-lease
 kube-public
 kube-system
-for checking which are the pods are running in which namespace the command is (kubectl get pod -n (name of the namespace))
+for checking which are the pods are running in which namespace the command is (kubectl get pod -n (name of the namespace)
 
 Network CNI (cluster Network Interface)
 from the public accessing the pod using the public the port number
