@@ -58,5 +58,11 @@ cat /proc/sys/net/ipv4/ip_forward
 For master node
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 
+6. Setup kubectl for master
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+
 
 
