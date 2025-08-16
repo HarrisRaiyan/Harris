@@ -1,0 +1,62 @@
+1. Prepare Environment
+
+Create at least 2 VMs in Proxmox:
+1 Master node (control plane) → manages the cluster.
+1+ Worker nodes (slaves) → run workloads (pods).
+⚙️ Example VM spec:
+OS: Ubuntu 22.04 LTS (recommended)
+Master: 2 CPU, 4GB RAM, 20GB disk
+Worker: 2 CPU, 2GB RAM, 20GB disk
+Network: All VMs in the same LAN (so they can communicate).
+
+2. Install Dependencies (on all nodes)
+# Update system
+sudo apt update && sudo apt upgrade -y
+# Install required packages
+sudo apt install -y apt-transport-https ca-certificates curl
+# Disable swap (Kubernetes requires it)
+sudo swapoff -a
+sudo sed -i '/ swap / s/^/#/' /etc/fstab
+
+3. Install Docker or container runtime
+sudo apt install -y containerd
+sudo mkdir -p /etc/containerd
+containerd config default | sudo tee /etc/containerd/config.toml
+sudo systemctl restart containerd
+sudo systemctl enable containerd
+
+4. Install kubeadm, kubelet, kubectl (on all nodes)
+# Update and install dependencies
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+# Add Kubernetes signing key
+sudo curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+# Add Kubernetes APT repository
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+# Update package index again
+sudo apt-get update
+# Install kubelet, kubeadm and kubectl
+sudo apt-get install -y kubelet kubeadm kubectl
+# Prevent automatic updates (recommended for cluster stability)
+sudo apt-mark hold kubelet kubeadm kubectl
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt update
+sudo apt install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+
+5. Initialize Master Node
+# Enable immediately
+sudo sysctl -w net.ipv4.ip_forward=1
+# Make it permanent across reboots
+echo "net.ipv4.ip_forward = 1" | sudo tee -a /etc/sysctl.conf
+# Reload sysctl config
+sudo sysctl -p
+
+Verify
+cat /proc/sys/net/ipv4/ip_forward
+For master node
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+
+
+
