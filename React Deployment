@@ -1,0 +1,47 @@
+React Application deployment in Container
+
+
+sudo apt update
+sudo apt install -y curl wget git nginx
+
+Install Node.js (for building React app):
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
+
+                 To Download the react files from git or we can use the local storage 
+                 
+Example: git clone https://github.com/your-repo/react-app.git
+cd react-app
+npm install
+npm run build
+After we run the build command it will create a folder build
+then we need to copy the inside of the folder to /var/www/html/
+
+sudo nano /etc/nginx/sites-available/reactapp
+the above command is to used to change the configuration file in ngnix the code is below
+server {
+    listen 80;  # this have to list the port number
+    server_name _;
+
+    root /var/www/reactapp;   # this command is path of the application 
+     index index.html;        # name of the .html application 
+
+    location / {
+        try_files $uri /index.html;
+    }
+}
+
+Enable the reactapp configutration file 
+                 
+sudo ln -s /etc/nginx/sites-available/reactapp /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+
+                 
+                 
+sudo mkdir -p /var/www/reactapp
+sudo cp -r build/* /var/www/reactapp/
+
+
+
+                 
