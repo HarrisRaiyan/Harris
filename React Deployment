@@ -31,7 +31,7 @@ server {
     }
 }
 
-Enable the reactapp configutration file 
+Enable the reactapp configutration file the below command
                  
 sudo ln -s /etc/nginx/sites-available/reactapp /etc/nginx/sites-enabled/
 sudo nginx -t
@@ -42,6 +42,8 @@ sudo systemctl reload nginx
 sudo mkdir -p /var/www/reactapp
 sudo cp -r build/* /var/www/reactapp/
 
+systemctl restart nginx
 
+and also we can deploy with different different port number with creating the file in /etc/nginx/sites-available/(any-name)
 
                  
