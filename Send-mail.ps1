@@ -1,9 +1,9 @@
 # ===================== CONFIGURATION =====================
 $smtpServer = "smtp-relay.gmail.com"            # Use "smtp.office365.com" for Outlook
 $smtpPort = 587
-$senderEmail = "noreply@zebronics.com"
-$senderPassword = "ovnmjduasysftkph"     # Use App Password if 2FA is on
-$recipients = "it.support@zebronics.com"   #,"recipient2@example.com"
+$senderEmail = "from mail id"
+$senderPassword =      # Use App Password if 2FA is on
+$recipients = "to Mail id"   #,"recipient2@example.com"
 $sourceFolder = "D:\HSBC\PayAck\"
 $emailSubject = "HSBC-Transcation-EOD"
 $emailBody = "Dear Sir/Madam,
@@ -43,3 +43,4 @@ Get-ChildItem -Path $sourceFolder -Filter *.csv -File | ForEach-Object {
         Write-Host "Failed to send $filename - $_"
     }
 }
+
